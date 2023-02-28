@@ -83,8 +83,11 @@ body ul {
   text-decoration: none;
   fill: var(--gray);
   color: var(--gray);
+  transition-property: fill, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/* CUBIC */
 .inside-header a:hover,
 .inside-header a:focus {
   fill: var(--blue);
@@ -217,13 +220,16 @@ body ul {
   justify-content: center;
   align-items: center;
   fill: var(--gray-clients);
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/* CUBIC */
 .team-social-links-box li:hover,
 .team-social-links-box li:focus,
 .team-social-links-box a:hover,
 .team-social-links-box a:focus {
-  background: var(--blue);
+  background-color: var(--blue);
   fill: var(--white);
 }
 
@@ -247,8 +253,11 @@ body ul {
   fill: var(--gray-clients);
   width: 170px;
   height: 92px;
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/* CUBIC */
 .our-clients-box:hover,
 .our-clients-box:focus,
 .our-clients-box a:hover,
@@ -266,6 +275,21 @@ body ul {
   text-align: center;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+.second-header-label-box {
+  display: flex;
+  transform: translate(0, -74px);
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .third-header {
@@ -312,8 +336,11 @@ body ul {
   height: 50px;
   border-radius: 4px;
   border: 0;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/* CUBIC */
 .buttons:hover,
 .buttons:focus,
 .main-buttons:hover,
@@ -389,13 +416,16 @@ body ul {
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   fill: var(--white);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/* CUBIC */
 .footee-social-links-box li:hover,
 .footee-social-links-box li:focus,
 .footee-social-links-box a:hover,
 .footee-social-links-box a:focus {
-  background: var(--blue);
+  background-color: var(--blue);
 }
 
 .footer-contacts {
@@ -409,8 +439,11 @@ body ul {
   opacity: 60%;
   display: inline-flex;
   margin-top: 9px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/* CUBIC */
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--blue);
@@ -420,8 +453,11 @@ body ul {
   font-style: normal;
   color: var(--black-main);
   margin-left: 46px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/* CUBIC */
 .menu-nav:hover,
 .menu-nav:focus {
   color: var(--blue);
@@ -432,6 +468,18 @@ body ul {
   color: var(--blue);
   padding-top: 0;
   margin-left: 46px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-nav-active::after {
+  content: "";
+  position: absolute;
+  top: 76px;
+  width: 53px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--blue);
 }
 
 .our-strengths ul {
@@ -464,8 +512,11 @@ body ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/* CUBIC */
 .feature-box:hover,
 .feature-box:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -495,10 +546,6 @@ body ul {
   color: var(--gray);
 }
 
-/* .portfolio-filters { */
-/* zostaje, bo może się przydać */
-/* } */
-
 .portfolio-filters ul {
   display: flex;
   justify-content: center;
@@ -518,7 +565,18 @@ body ul {
   gap: calc((var(--container-width) - 3 * 370px) / 2);
 }
 
-.portfolio-projects li {
+.portfolio-projects-box {
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+
+.portfolio-projects-box > img {
+  display: flex;
+  width: 370px;
+}
+
+.portfolio-projects-grid li {
   border: 1px solid var(--gray-tint);
   background-color: var(--white);
   width: 370px;
@@ -527,12 +585,39 @@ body ul {
   flex-direction: column;
   padding: 0;
   margin: 0;
+  overflow: hidden;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/* CUBIC */
 .portfolio-projects li:hover,
 .portfolio-projects li:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-projects li:hover .overlay,
+.portfolio-projects li:focus .overlay {
+  transform: translateY(-100%);
+}
+
+.overlay {
+  /* position: absolute; */
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(0);
+  transition: transform 500ms ease;
+}
+
+.overlay p {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  margin: 0;
+  padding: 49px 24px;
 }
 
 .portfolio-projects h3 {
@@ -546,7 +631,7 @@ body ul {
   color: var(--black-main);
 }
 
-.portfolio-projects p {
+.portfolio-projects-grid li > p {
   margin: 4px 24px 20px;
 }
 
@@ -557,3 +642,53 @@ body ul {
 .white-font {
   color: var(--white);
 }
+
+/* Backdrop - START */
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition-duration: 0.5s;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  outline: 5px solid black;
+  background-color: var(--white);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.is-hidden {
+  pointer-events: none;
+  transition-duration: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Backdrop - END */

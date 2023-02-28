@@ -66,7 +66,10 @@
         <!-- <div class="container"> -->
         <div class="main-header-flex">
           <h1>Efektywne rozwiązania<br />dla waszego biznesu</h1>
-          <button class="main-buttons" type="button">Zamów usługę</button>
+          <!-- <button class="main-buttons" type="button">Zamów usługę</button> -->
+          <button class="main-buttons modal-btn" type="button" data-modal-open>
+            Zamów usługę
+          </button>
         </div>
         <!-- </div> -->
       </section>
@@ -137,6 +140,9 @@
                 width="370"
                 height="294"
               />
+              <div class="second-header-label-box">
+                <p>Aplikacje komputerowe</p>
+              </div>
             </li>
             <li>
               <img
@@ -145,6 +151,9 @@
                 width="370"
                 height="294"
               />
+              <div class="second-header-label-box">
+                <p>Aplikacje mobilne</p>
+              </div>
             </li>
             <li>
               <img
@@ -153,6 +162,9 @@
                 width="370"
                 height="294"
               />
+              <div class="second-header-label-box">
+                <p>Rozwiązania graficzne</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -466,5 +478,14 @@
         </ul>
       </div>
     </footer>
+
+    <!-- BACKDROP -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>x</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
